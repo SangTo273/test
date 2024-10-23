@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BenhNhan"
+    targetNamespace="http://tempuri.org/BenhNhan.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/BenhNhan.xsd"
+    xmlns:mstns="http://tempuri.org/BenhNhan.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+	<xs:element name="DS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="khoa" maxOccurs="10">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="tenkhoa">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Khoa thần kinh"/>
+										<xs:enumeration value="Khoa nội"/>
+										<xs:enumeration value="Khoa ngoại"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="benhnhan" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="hoten">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="40"></xs:maxLength>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="ngaysinh">
+											<xs:simpleType>
+												<xs:restriction base="xs:date">
+													
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="maso" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:ID">
+												<xs:length value="5"></xs:length>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="songay">
+										<xs:simpleType>
+											<xs:restriction base="xs:long">
+												<xs:maxInclusive value="40"></xs:maxInclusive>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="makhoa" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:ID">
+									<xs:maxLength value="6"></xs:maxLength>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="tenbv" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Bệnh viện Bạch Mai"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

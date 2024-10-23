@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="BenhNhan.xslt"?>
+<DS tenbv="Bệnh viện Bạch Mai" xmlns="http://tempuri.org/BenhNhan.xsd">
+	<khoa makhoa="A01">
+		<tenkhoa>Khoa thần kinh</tenkhoa>
+		<benhnhan maso="bn001" songay="20">
+			<hoten>Lê Thu Lan</hoten>
+			<ngaysinh>1988-12-21</ngaysinh>
+		</benhnhan>
+		<benhnhan maso="bn002" songay="25">
+			<hoten>Lê Văn Hà</hoten>
+			<ngaysinh>1989-12-25</ngaysinh>
+		</benhnhan>
+	</khoa>
+	<khoa makhoa="A02">
+		<tenkhoa>Khoa nội</tenkhoa>
+		<benhnhan maso="bn003" songay="20">
+			<hoten>Lê Thu Lan</hoten>
+			<ngaysinh>1988-12-21</ngaysinh>
+		</benhnhan>
+		<benhnhan maso="bn004" songay="25">
+			<hoten>Lê Văn Hà</hoten>
+			<ngaysinh>1989-12-25</ngaysinh>
+		</benhnhan>
+	</khoa>
+</DS>
